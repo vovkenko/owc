@@ -477,8 +477,8 @@
             <h2 id="title-events">Nächste Events</h2>
             <div class="event-card">
                 <div class="fight-date" id="txt-soon">Demnächst</div>
-                <div class="fight-matchup" id="txt-title-fight">OWC Fightnight</div>
-                <div class="fight-method">OWC Newcomer vs. OWC Newcomer</div>
+                <div class="fight-matchup" id="txt-title-fight">OWC Title Fight</div>
+                <div class="fight-method">The Wolf vs. The German Tank</div>
             </div>
         </div>
 
@@ -516,7 +516,7 @@
 
     <script>
         // Aktuelle Sprache
-        let currentLang = 'de';
+        let currentLang = 'ru';
 
         // Übersetzungs-Wörterbuch
         const translations = {
@@ -597,7 +597,7 @@
             }
         };
 
-        // Die Kämpfer (mit mehrsprachigen Bios)
+        // Die Kämpfer (mit 2 neuen Kämpfern erweitert)
         const fighters = [
             {
                 id: 1,
@@ -614,8 +614,22 @@
                 weight: "58 kg"
             },
             {
-                id: 2,
+                id: 3,
                 rank: "1",
+                name: "Ivan", 
+                nickname: "The German Tank",
+                bio: {
+                    de: "Der Spitzanwärter der OWC. Kräftiger Freistilringer. Nutzt seine Ausdauer für konstanten Druck im Stand und am Boden.",
+                    en: "The number one OWC Contender. Strong freestyle wrestler. Uses his endurance for constant pressure standing and on the ground.",
+                    ru: "OWC Претендент номер 1. Сильный вольный борец. Использует выносливость для постоянного давления в стойке и в партере."
+                },
+                record: "1-0",
+                height: "180 cm",
+                weight: "67 kg"
+            },
+            {
+                id: 2,
+                rank: "2",
                 name: "Hryhorii", 
                 nickname: "The Sniper",
                 bio: {
@@ -626,17 +640,39 @@
                 record: "0-1",
                 height: "175 cm",
                 weight: "90 kg"
+            },
+            {
+                id: 4,
+                rank: "3",
+                name: "Ivan", 
+                nickname: "Ivanushka",
+                bio: {
+                    de: "Motivierter Newcomer. Arbeitet hart an seiner Takedown-Defense und seiner Taktik im Käfig.",
+                    en: "Motivated newcomer. Works hard on his takedown defense and his cage tactics.",
+                    ru: "Мотивированный новичок. Усердно работает над защитой от тейкдаунов и тактикой в клетке."
+                },
+                record: "0-1",
+                height: "176 cm",
+                weight: "80 kg"
             }
         ];
 
-        // Die Kampfhistorie (mehrsprachig)
+        // Die Kampfhistorie (mit dem neuen 2. Event)
         const fights = [
+            {
+                date: { de: "17.10.2026", en: "17.10.2026", ru: "17.10.2026" },
+                fighter1: "The German Tank",
+                fighter2: "Ivanushka",
+                winner: "The German Tank",
+                method: { de: "Punktsieg nach 3 Runden á 2 Min. (Freestyle Wrestling)", en: "Split decision after 3 rounds, 2 mins each (Freestyle Wrestling)", ru: "Раздельное решение после 3 раундов по 2 мин. (Вольная борьба)" },
+                event: "OWC Event Newcomer"
+            },
             {
                 date: { de: "07.10.2026", en: "07.10.2026", ru: "07.10.2026" },
                 fighter1: "Yehor",
                 fighter2: "Hryhorii",
-                winner: "Yehor",
-                method: { de: "Einstimmiger Punktsieg", en: "Unanimous Decision", ru: "Единогласное решение" },
+                winner: "Yehor", 
+                method: { de: "Einstimmiger Punktsieg (Freestyle Wrestling)", en: "Unanimous Decision (Freestyle Wrestling)", ru: "Единогласное решение (Вольная борьба)" },
                 event: "OWC Event 1"
             }
         ];
